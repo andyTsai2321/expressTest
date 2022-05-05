@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "4a1fab03-689a-4236-a77f-3d0bb825b726",
+		"name": "posts - hero",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"rocky-sands-49122",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"hello2\",\n    \"content\": \"123321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"rocky-sands-49122",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"今天要刷牙\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"rocky-sands-49122",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"今天要刷牙\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts/626aaaa13ab9c1db0b540e4e",
+					"protocol": "https",
+					"host": [
+						"rocky-sands-49122",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"626aaaa13ab9c1db0b540e4e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts/626aa9723ab9c1db0b540e37",
+					"protocol": "https",
+					"host": [
+						"rocky-sands-49122",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"626aa9723ab9c1db0b540e37"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
