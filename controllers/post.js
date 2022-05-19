@@ -17,6 +17,8 @@ const posts = {
   async createPosts(req,res){
       try {
         const {body}=req;
+        console.log(req)
+        console.log(body)
         const newPost = await Posts.create(
           {
             user: body.user,
