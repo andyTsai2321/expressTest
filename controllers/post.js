@@ -1,18 +1,25 @@
 const handleError = require('../service/handleError');
 const handleSuccess = require('../service/handleSuccess');
 const Posts = require('../model/post');
+const User = require('../model/user');
 
 const posts = {
   async getPosts(req,res){
-    const getPosts = await Posts.find();
-    handleSuccess(res, getPosts);
+    const { sort, keyword } = req.query;
+    const timeSort = sort === 'asc' ? 'createdAt' : '-createdAt';
+
+    const getPosts = await Posts.find().sort(timeSort).populate({ 
+      path: 'user',
+      select: 'name photo'
+  });
+      handleSuccess(res, getPosts);
   },  
   async createPosts(req,res){
       try {
         const {body}=req;
         const newPost = await Posts.create(
           {
-            name: body.name,
+            user: body.user,
             tags: body.tags,
             image: body.image,
             createAt: body.createAt,
