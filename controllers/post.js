@@ -20,12 +20,9 @@ const posts = {
         const newPost = await Posts.create(
           {
             user: body.user,
-            tags: body.tags,
             image: body.image,
             createAt: body.createAt,
             content: body.content,
-            likes: body.likes,
-            comments: body.comments,
           }
         )
         handleSuccess(res, newPost);
