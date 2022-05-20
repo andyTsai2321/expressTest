@@ -4,21 +4,12 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, '請填寫姓名']
     },
-    email: [
-        {
-            type: String,
-            required: [true, '請填寫信箱'],
-            unique: true,
-            lowercase: true,
-            select: false,
-        }
-    ],
-    photo: {
-        type: String
-    },
-    image: {
+    email: {
         type: String,
-        default: ""
+        required: [true, '請填寫信箱'],
+        unique: true,
+        lowercase: true,
+        select: false,
     },
     createAt: {
         type: Date,
@@ -28,7 +19,7 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model(
-    'User',
+    'user',
     userSchema
 );
 
