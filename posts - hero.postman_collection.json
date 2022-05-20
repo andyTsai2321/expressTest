@@ -33,7 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"hello2\",\n    \"content\": \"123321\"\n}",
+					"raw": "{\n    \"user\": \"5cabe64dcf0d4447fa60f5e1\",\n    \"content\": \"123321\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"今天要刷牙\"\n}",
+					"raw": "{\n    \"content\": \"今天要刷牙\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,7 +101,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts/626aaaa13ab9c1db0b540e4e",
+					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts/62878e6c1ef2a94ca5864b84",
 					"protocol": "https",
 					"host": [
 						"rocky-sands-49122",
@@ -111,7 +111,7 @@
 					"path": [
 						"api",
 						"posts",
-						"626aaaa13ab9c1db0b540e4e"
+						"62878e6c1ef2a94ca5864b84"
 					]
 				}
 			},
@@ -123,7 +123,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts/626aa9723ab9c1db0b540e37",
+					"raw": "https://rocky-sands-49122.herokuapp.com/api/posts/62878e6c1ef2a94ca5864b84",
 					"protocol": "https",
 					"host": [
 						"rocky-sands-49122",
@@ -133,7 +133,7 @@
 					"path": [
 						"api",
 						"posts",
-						"626aa9723ab9c1db0b540e37"
+						"62878e6c1ef2a94ca5864b84"
 					]
 				}
 			},
