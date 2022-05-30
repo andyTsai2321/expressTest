@@ -25,7 +25,6 @@ const posts = {
     }
     const newPost = await Posts.create(
       {
-        user: "5cabe64dcf0d4447fa60f5e1",
         image: body.image,
         createAt: body.createAt,
         content: body.content,
