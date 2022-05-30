@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 const PostsControllers = require('../controllers/post')
+const handleErrorAsync = require('../service/handleErrorAsync');
 
-router.get('/', PostsControllers.getPosts);
-router.post('/', PostsControllers.createPosts);
-router.delete('/', PostsControllers.deleteAllPosts);
-router.delete('/:id', PostsControllers.deletePost);
-router.patch('/:id', PostsControllers.updatePost);
+router.get('/', handleErrorAsync(PostsControllers.getPosts));
+router.post('/', handleErrorAsync(PostsControllers.createPosts));
+router.delete('/', handleErrorAsync(PostsControllers.deleteAllPosts));
+router.delete('/:id', handleErrorAsync(PostsControllers.deletePost));
+router.patch('/:id', handleErrorAsync(PostsControllers.updatePost));
 module.exports = router;
