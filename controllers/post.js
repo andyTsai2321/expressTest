@@ -18,7 +18,7 @@ const posts = {
   async createPosts(req, res, next) {
     const { body } = req;
     if (!body.content) {
-      return appError(400, "缺少content", next)
+      return appError(400, "content不可為空", next)
     }
     if (!body.user) {
       return appError(400, "缺少user id", next)
@@ -39,7 +39,7 @@ const posts = {
   },
   async deletePost(req, res, next) {
     const id = req.params.id;
-    
+
     if (!mongoose.isValidObjectId(id)) {
       return appError(400, "id格式錯誤", next);
     }
@@ -48,10 +48,23 @@ const posts = {
     const getPosts = await Posts.find();
     handleSuccess(res, getPosts);
   },
-  async updatePost(req, res) {
+  async updatePost(req, res, next) {
     const id = req.params.id;
     const { body } = req;
-    await Posts.findByIdAndUpdate(id, body)
+
+    if (!mongoose.isValidObjectId(id)) {
+      return appError(400, "id格式錯誤", next);
+    }
+
+    if (!body.content) {
+      return appError(400, "content不可為空", next)
+    }
+
+    await Posts.findByIdAndUpdate(id, {
+      name: body.name,
+      content: body.content,
+      image: body.image,
+    })
     const getPosts = await Posts.find();
     handleSuccess(res, getPosts);
   },
